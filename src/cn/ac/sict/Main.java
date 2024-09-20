@@ -13,15 +13,12 @@ public class Main {
         //下载地址
         String url = null;
         if (args == null || args.length == 0) {
-            for (; ;) {
+            do {
                 //System.out.println("请输入下载链接！");
                 LogUtils.info("请输入下载链接地址！");
                 Scanner scanner = new Scanner(System.in);
                 url = scanner.next();
-                if (url != null) {
-                    break;
-                }
-            }
+            } while (url == null);
         }else {
             url = args[0];
         }
